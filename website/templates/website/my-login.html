@@ -3,27 +3,25 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-
     <body>
         <br>
-        <div class="container-account-creation p-5 form-layout">
-            <h3>Create your Account</h3>
+        <div class="container-login-form form-layout">
+            <h3>Login to your Account</h3>
+
             <hr>
             <br>
             <form method="POST" autocomplete="off">
                 {% csrf_token %}
-                {{form.as_p}}
+                {{login_form|crispy}}
                 <br>
-                <button type="submit" class="btn btn-primary">Create Account</button>
+                <button type="submit" class="btn btn-primary w-100 btn-block p-2">Login</button>
             </form>
 
-            <br>
+            
             <div class="text-center">
-                <p>Already have an account?</p> <a href="{% url 'my-login' %}">Login</a>
+                <p>Don't have an Account?</p> <a href="{% url 'register' %}">Register</a>
             </div>
             <br>
-
         </div>
     </body>
-
 {% endblock %}
