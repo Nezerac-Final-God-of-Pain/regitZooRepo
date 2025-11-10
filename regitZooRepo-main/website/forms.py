@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django import forms
 from django.forms.widgets import PasswordInput, TextInput
 
-from .models import zooBooking
+from .models import ZooBooking
 
 # - Register or Create a user
 class CreateUserForm(UserCreationForm):
@@ -21,6 +21,6 @@ class LoginForm(AuthenticationForm):
 # - make a zoo booking
 class zoobook(forms.ModelForm):
     class Meta:
-        model = zooBooking
-        fields = ['first_name', 'email', 'address', 'arriveDate', 'leaveDate', 'numAdults', 'numChildren', 'numInfants']
+        model = ZooBooking
+        fields = ['booking_id', 'user', 'ticket_type', 'visit_date', 'adult_tickets', 'child_tickets']
 

@@ -3,7 +3,7 @@ from .forms import CreateUserForm, LoginForm
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
-from .models import zooBooking
+from .models import ZooBooking
 from django.shortcuts import render, redirect
 from .forms import CreateUserForm, LoginForm, zoobook
 
@@ -51,7 +51,7 @@ def user_logout(request):
 @login_required(login_url='my-login')
 def booking(request):
 
-    my_ZooBookings = zooBooking.objects.all()
+    my_ZooBookings = ZooBooking.objects.all()
     context = {'records': my_ZooBookings}
 
     return render(request, 'website/Booking.html', context=context)

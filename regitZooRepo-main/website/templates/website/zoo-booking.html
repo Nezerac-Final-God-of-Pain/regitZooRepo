@@ -3,21 +3,22 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-
-    <br>
-    <div class="container zooBooky form-layout">
-        <h3>Book your Vists today!</h3>
-
-        <h6> Please Fill in the Required Infomation</h6>
-
-        <hr>
+    <body>
         <br>
-        <form method="POST" autocomplete="off">
-            {% csrf_token %}
-            {{form|crispy}}
+        <div class="container zooBooky form-layout text-light">
+            <h3>Book your Vists today!</h3>
+
+            <h6> Please Fill in the Required Infomation</h6>
+
+            <hr>
             <br>
-            <button type="submit" class="btn btn-zoo-booky">Book</button>
-        </form>
-    </div>
+            <form method="POST" autocomplete="off">
+                {% csrf_token %}
+                {{zoobook|crispy}}
+                <br>
+                <button type="submit" class="btn btn-zoo-booky">Book</button>
+            </form>
+        </div>
+    </body>
 
 {% endblock %}

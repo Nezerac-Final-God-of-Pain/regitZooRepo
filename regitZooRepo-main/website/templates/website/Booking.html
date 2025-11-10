@@ -17,15 +17,15 @@
 
         <thead class = "table-primary">
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Address</th>
-                <th scope="col">Arrive Date</th>
-                <th scope="col">Leave Date</th>
-                <th scope="col">Number of Adults</th>
-                <th scope="col">Number of Children</th>
-                <th scope="col">Number of Infants</th>
+                <th scope="col">Booking ID</th>
+                <th scope="col">Username</th>
+                <th scope="col">Ticket Type</th>
+                <th scope="col">Visit Date</th>
+                <th scope="col">Adult Tickets</th>
+                <th scope="col">Children Tickets</th>
+                <th scope="col">Total Price</th>
+                <th scope="col">Status</th>
+                <th scope="col">Booking Date</th>
                 
             </tr>
         </thead>
@@ -34,15 +34,15 @@
             {% if records %}
                 {% for record in records %}
                 <tr>
-                    <td> {{record.zooID}} </td>
-                    <td> {{record.first_name}} </td>
-                    <td> {{record.email}} </td>
-                    <td> {{record.address}} </td>
-                    <td> {{record.arriveDate}} </td>
-                    <td> {{record.leaveDate}} </td>
-                    <td> {{record.numAdults}} </td>
-                    <td> {{record.numChildren}} </td>
-                    <td> {{record.numInfants}} </td>
+                    <td> {{record.booking_id}} </td>
+                    <td> {{record.user}} </td>
+                    <td> {{record.ticket_type}} </td>
+                    <td> {{record.visit_date}} </td>
+                    <td> {{record.adult_tickets}} </td>
+                    <td> {{record.children_tickets}} </td>
+                    <td> {{record.total_price}} </td>
+                    <td> {{record.status}} </td>
+                    <td> {{record.booking_date}} </td>
                 </tr>
                 {% endfor %}
             {% endif %}
