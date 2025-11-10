@@ -1,0 +1,93 @@
+.form-layout{
+    align-self: center;
+    border-radius: 5px;
+    width: 500px;
+}
+
+.container-login-form{
+    color:white;
+    background-color: #5A7197;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-form-header{
+    color:white;
+    text-align: center;
+}
+
+.login-btn{
+    color: white;
+    background-color:#96AED6;
+    width: 200px;
+    font-size: 20px;
+}
+
+.reg-link{
+    color: white;
+    font-size: 20px;
+}
+
+
+.container-account-creation{
+    color:white;
+    background-color: #5A7197;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    
+}
+
+.account-creation-header{
+    color:white;
+    text-align: center;
+}
+
+.reg-btn{
+    color: white;
+    background-color:#96AED6;
+    width: 200px;
+    font-size: 20px;
+}
+
+.login-link{
+    color: white;
+    font-size: 20px;
+}
+
+.navbar {
+    background-color: #202A3A;
+    height: 6rem;
+}
+
+.zb-nlink{
+    color: white;
+    text-decoration: none;
+}
+
+.logout-nlink{
+    color: white;
+    text-decoration: none;
+}
+
+.login-nlink{
+    color: white;
+    text-decoration: none;
+}
+
+.reg-nlink{
+    color: white;
+    text-decoration: none;
+}
+
+.ms-3{
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,33 @@
+{% load static %}
+
+<nav class="navbar">
+  <div class="container-fluid">
+
+    <!-- Logo and Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="{% url '' %}">
+      <img src="{% static 'zooLogo.png' %}" alt="Zoo Logo" style="height: 80px;">
+      <span class="ms-3" style="font-size: 2rem; font-weight: bold;">RIGET ZOO ADVENTURES</span>
+    </a>
+          <li class="nav-item">
+            <a class="nav-link zb-nlink" href="{% url 'booking' %}">Bookings</a>
+          </li>
+
+
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link logout-nlink" href="{% url 'user-logout' %}">Logout</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link login-nlink" href="{% url 'my-login' %}">Sign In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link reg-nlink" href="{% url 'register' %}">Register</a>
+          </li>
+        {% endif %}
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
